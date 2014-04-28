@@ -5,24 +5,24 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-  
+    
   #######################bar chart code###################################
   data_table = GoogleVisualr::DataTable.new
   data_table.new_column('string', 'name')
-    data_table.new_column('number', 'mssg_count')
-    data_table.add_rows(@users.length)
+  data_table.new_column('number', 'mssg_count')
+  data_table.add_rows(@users.length)
   @users.each_with_index do |element,index|
-     data_table.set_cell(index, 0, element.name)
-    data_table.set_cell(index, 1, element.msg_count)
+   data_table.set_cell(index, 0, element.name)
+   data_table.set_cell(index, 1, element.msg_count)
    
-  end
-  opts   = { :width => 400, :height => 240, :title => 'BigData', vAxis: {title: 'Name', titleTextStyle: {color: 'red'}} }
-  @chart = GoogleVisualr::Interactive::BarChart.new(data_table, opts)
-  respond_to do |format|
-    format.html
-  end
-  
-  end
+ end
+ opts   = { :width => 400, :height => 240, :title => 'BigData', vAxis: {title: 'Name', titleTextStyle: {color: 'red'}} }
+ @chart = GoogleVisualr::Interactive::BarChart.new(data_table, opts)
+ respond_to do |format|
+  format.html
+end
+
+end
 
   # GET /users/1
   # GET /users/1.json
@@ -88,4 +88,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :msg_count)
     end
-end
+  end
