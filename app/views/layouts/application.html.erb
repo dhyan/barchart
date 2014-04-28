@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src='http://www.google.com/jsapi'></script>;
+  <title>TestingProject</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "users", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
