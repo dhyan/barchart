@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,5 +43,12 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
+
  gem 'debugger', group: [:development, :test]
  gem 'headshot'
+
+gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem "factory_girl_rails"
+end
