@@ -4,7 +4,7 @@ class AdminsController < ApplicationController
   # GET /admins
   # GET /admins.json
   def index
-    @admins = Admin.all
+    # @admins = Admin.all
   end
 
   # GET /admins/1
