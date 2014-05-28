@@ -1,7 +1,15 @@
 TestingProject::Application.routes.draw do
+
+  get "headshot_photoo/index"
+  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
+
   resources :admins
   root 'admins#index'
+
   resources :users
+  resources :headshot_photos
+   # resources :headshots
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
