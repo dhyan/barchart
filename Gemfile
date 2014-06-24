@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem "selenium-webdriver", "~> 2.41.0"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem "google_visualr", "~> 2.1.0"
