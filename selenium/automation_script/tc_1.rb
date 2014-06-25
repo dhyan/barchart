@@ -12,6 +12,7 @@ class Sites_List
   		@Test.get "localhost:3000"
   		@Test.find_element(:xpath, "//a[@href='/admins/new']").click
   		@Wait.until{@Test.find_element(:xpath, "//a[@href='/admins']")}.click
+  		@Test.close
   	end
 
   end

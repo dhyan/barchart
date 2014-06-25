@@ -1,7 +1,7 @@
 test:
   post:
     - nohup bash -c "bundle exec rails server &"
-    - sleep 30
+    - sleep 10
     - bundle exec rspec selenium/automation_script/*.rb --colour 
     
 deployment:
