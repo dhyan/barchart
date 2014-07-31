@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem "selenium-webdriver", "~> 2.41.0"
 
+gem 'json'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem "google_visualr", "~> 2.1.0"

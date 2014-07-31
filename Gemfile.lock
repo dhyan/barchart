@@ -158,6 +158,7 @@ DEPENDENCIES
   headshot
   jbuilder (~> 1.2)
   jquery-rails
+  json
   pg
   rails (= 4.0.0)
   rspec-rails (~> 3.0.0.beta)
